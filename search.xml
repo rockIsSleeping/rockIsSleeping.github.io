@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>AVL Tree and Splay Tree</title>
+    <url>/2024/09/23/AVLsp/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Advanced Data Structure</category>
+        <category>AVL</category>
+      </categories>
+      <tags>
+        <tag>DS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Welcome to this page!</title>
     <url>/2024/09/20/This_is_a_test/</url>
     <content><![CDATA[<h2 id="TEST"><a href="#TEST" class="headerlink" title="TEST"></a>TEST</h2><h3 id="WHY"><a href="#WHY" class="headerlink" title="WHY"></a>WHY</h3><p>I don’t know.</p>
@@ -8,6 +20,18 @@
       <categories>
         <category>Test</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Amortized Analysis</title>
+    <url>/2024/09/23/amortizedAna/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Advanced Data Structure</category>
+        <category>Analysis</category>
+      </categories>
+      <tags>
+        <tag>DS</tag>
+      </tags>
   </entry>
   <entry>
     <title>Hello World TEST</title>
