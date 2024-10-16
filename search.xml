@@ -130,7 +130,10 @@
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="/css/auto-number.css"> <!--发布时启用 -->
 
 <h2 id="Mathjax插件"><a href="#Mathjax插件" class="headerlink" title="Mathjax插件"></a>Mathjax插件</h2><p>在使用Mathjax插件过程中出现左右花括号无法正常渲染的问题（即使转义了也没用），则可能是markdown与该插件渲染冲突导致的，解决方法为修改node_modules\marked\lib下的marked.js脚本第1186行，去除其中的左右花括号，修改后代码如下。</p>
-<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">escape</span>: <span class="regexp">/^\\([!"#$%&amp;'()*+,\-./:;&lt;=&gt;?@\[\]\\^_`|~])/</span>,</span><br></pre></td></tr></table></figure></div>]]></content>
+<div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">escape</span>: <span class="regexp">/^\\([!"#$%&amp;'()*+,\-./:;&lt;=&gt;?@\[\]\\^_`|~])/</span>,</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="奇怪的WSL2网络配置"><a href="#奇怪的WSL2网络配置" class="headerlink" title="奇怪的WSL2网络配置"></a>奇怪的WSL2网络配置</h2><p>windows主机使用Steam++对Github进行加速时在WSL使用git进行deploy之后出现无法连接到443端口的情况，着实令人迷惑，查了很多教程也没有发现明确的解决方法，遂换成clash，新增C:\users&lt;用户名&gt;.wslconfig文件后加入如下内容。最后再在WSL中输入</p>
+]]></content>
       <categories>
         <category>Blog Building</category>
         <category>problems</category>
