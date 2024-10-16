@@ -15,7 +15,25 @@
   <entry>
     <title>Android Malicious App</title>
     <url>/2024/10/13/AndroidSW/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="97a2081ff737f96f6b63d7a72f7c02b3986d9707dbdf952bfccd58a6ec85449e">97f51fa39f8a90ea69f0b1d4189714b55c2d162a2c816068d7414c2116b990d0</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
       <categories>
         <category>Research Projects</category>
         <category>Android</category>
@@ -27,7 +45,25 @@
   <entry>
     <title>2024 CTF101</title>
     <url>/2024/10/13/CTF101/</url>
-    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2>]]></content>
+    <content><![CDATA[
+<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="889138cefcf3654ef29a81f045dc6b78d417bde4436f25da2c9e249dc08b4223">a496b5f0b01319a0714563a3be982d3f52e268e872cbc73c1f99221b5b38d81f7710e7ee13c7468eedeaf5bcad2dde737619ca676db08f57a0a3fcaa241f4d7610916b408f59e74d9701b0d0ed3fa9e45f5435737f4d1d49c682f1684adec6511d0629b6cc74eaec1c252642f71ab2242c10c794e8d8c61dadab3b6d4acbf8583f0e3a9e7b023d695dd29c3e74f822a2</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hey, password is required here.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<link href="/css/hbe.style.css" rel="stylesheet" type="text/css"><script data-swup-reload-script type="module" src="/js/plugins/hbe.js"></script>
+<script data-swup-reload-script type="module">
+import {initHBE} from "/js/plugins/hbe.js";
+  console.log("hexo-blog-encrypt: loaded.");
+    initHBE();
+</script>
+]]></content>
       <categories>
         <category>Lecture Guide</category>
         <category>CTF101</category>
@@ -132,7 +168,11 @@
 <h2 id="Mathjax插件"><a href="#Mathjax插件" class="headerlink" title="Mathjax插件"></a>Mathjax插件</h2><p>在使用Mathjax插件过程中出现左右花括号无法正常渲染的问题（即使转义了也没用），则可能是markdown与该插件渲染冲突导致的，解决方法为修改node_modules\marked\lib下的marked.js脚本第1186行，去除其中的左右花括号，修改后代码如下。</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">escape</span>: <span class="regexp">/^\\([!"#$%&amp;'()*+,\-./:;&lt;=&gt;?@\[\]\\^_`|~])/</span>,</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="奇怪的WSL2网络配置"><a href="#奇怪的WSL2网络配置" class="headerlink" title="奇怪的WSL2网络配置"></a>奇怪的WSL2网络配置</h2><p>windows主机使用Steam++对Github进行加速时在WSL使用git进行deploy之后出现无法连接到443端口的情况，着实令人迷惑，查了很多教程也没有发现明确的解决方法，遂换成clash，新增C:\users&lt;用户名&gt;.wslconfig文件后加入如下内容。最后再在WSL中输入</p>
+<h2 id="奇怪的WSL2网络配置"><a href="#奇怪的WSL2网络配置" class="headerlink" title="奇怪的WSL2网络配置"></a>奇怪的WSL2网络配置</h2><p>windows主机使用Steam++对Github进行加速时在WSL使用git进行deploy之后出现无法连接到443端口的情况，着实令人迷惑，查了很多教程也没有发现明确的解决方法，遂换成clash，新增C:\users&lt;用户名&gt;.wslconfig文件后加入如下内容。</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">[wsl2]</span><br><span class="line">networkingMode=mirrored</span><br></pre></td></tr></table></figure></div>
+<p>最后再在WSL中输入<code>sudo visudo</code>打开文件后在末尾输入：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Defaults env_keep="http_proxy https_proxy"</span><br></pre></td></tr></table></figure></div>
+<p>保存之后<strong>重启</strong>WSL(<del>反正我是使用了神秘的重启大法然后成功了</del>) <br><br>然后再<code>wget www.google.com</code>试试。</p>
 ]]></content>
       <categories>
         <category>Blog Building</category>
