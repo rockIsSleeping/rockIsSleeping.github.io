@@ -83,19 +83,7 @@ export default function initUtils() {
     },
 
     calculatePercentage(scrollTop, scrollHeight, clientHeight) {
-      let percentageValue = Math.round(
-        (scrollTop / (scrollHeight - clientHeight)) * 100,
-      );
-      if (
-        isNaN(percentageValue) ||
-        percentageValue < 0 ||
-        !isFinite(percentageValue)
-      ) {
-        percentageValue = 0;
-      } else if (percentageValue > 100) {
-        percentageValue = 100;
-      }
-      return percentageValue;
+      return Math.round((scrollTop / (scrollHeight - clientHeight)) * 100);
     },
 
     // register window scroll event
