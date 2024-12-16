@@ -516,6 +516,19 @@ import {initHBE} from "/js/plugins/hbe.js";
       </tags>
   </entry>
   <entry>
+    <title>Problems Explanation</title>
+    <url>/2024/12/16/com_problem/</url>
+    <content><![CDATA[<p><a href="/files/exp_new.pdf">Notes</a></p>
+]]></content>
+      <categories>
+        <category>Lecture Notes</category>
+        <category>Computer Composition</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>多元随机变量</title>
     <url>/2024/10/26/val2/</url>
     <content><![CDATA[<link rel="stylesheet" type="text/css" href="/css/auto-number.css"> <!--发布时启用 -->
