@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2024/11/13/ads_lec4/"/>
+    <link rel="canonical" href="http://example.com/2025/01/17/zongjie/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -23,15 +23,15 @@
         
         <meta name="description" content="false">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lecture 4: Leftist Heaps and Skew Heaps">
-<meta property="og:url" content="http://example.com/2024/11/13/ads_lec4/index.html">
+<meta property="og:title" content="大二上课程总结">
+<meta property="og:url" content="http://example.com/2025/01/17/zongjie/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="false">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-11-13T11:58:07.351Z">
-<meta property="article:modified_time" content="2024-11-13T12:05:27.271Z">
+<meta property="article:published_time" content="2025-01-17T09:54:15.301Z">
+<meta property="article:modified_time" content="2025-01-17T09:59:26.171Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="DS">
+<meta property="article:tag" content="2024-2025">
 <meta name="twitter:card" content="summary">
     
     
@@ -44,7 +44,7 @@
     
     <title>
         
-            Lecture 4: Leftist Heaps and Skew Heaps | Blog Of zzz~
+            大二上课程总结 | Blog Of zzz~
         
     </title>
 
@@ -546,7 +546,7 @@ mjx-container[display="true"] + br {
 		<div class="article-title relative w-full">
 			
 			<div class="w-full flex items-center pt-6 justify-start">
-				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">Lecture 4: Leftist Heaps and Skew Heaps</h1>
+				<h1 class="article-title-regular text-second-text-color tracking-tight text-4xl md:text-6xl font-semibold px-2 sm:px-6 md:px-8 py-3">大二上课程总结</h1>
 			</div>
 			
 		</div>
@@ -567,15 +567,15 @@ mjx-container[display="true"] + br {
 					<div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2024-11-13 19:58:07</span>
-        <span class="mobile">2024-11-13 19:58:07</span>
+        <span class="desktop">2025-01-17 17:54:15</span>
+        <span class="mobile">2025-01-17 17:54:15</span>
         <span class="hover-info">Created</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-11-13 20:05:27</span>
-            <span class="mobile">2024-11-13 20:05:27</span>
+            <span class="desktop">2025-01-17 17:59:26</span>
+            <span class="mobile">2025-01-17 17:59:26</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -589,7 +589,7 @@ mjx-container[display="true"] + br {
                     
                         
                         <li>
-                            <a href="/categories/Lecture-Notes/">Lecture Notes</a>&nbsp;
+                            <a href="/categories/Lecture-Guide/">Lecture Guide</a>&nbsp;
                         </li>
                     
                     
@@ -599,7 +599,7 @@ mjx-container[display="true"] + br {
                             <li>></li>
                         
                         <li>
-                            <a href="/categories/Lecture-Notes/Advanced-Data-Structure/">Advanced Data Structure</a>&nbsp;
+                            <a href="/categories/Lecture-Guide/2024-2025/">2024-2025</a>&nbsp;
                         </li>
                     
                     
@@ -613,7 +613,7 @@ mjx-container[display="true"] + br {
             <ul>
                 
                     <li>
-                        <a href="/tags/DS/">DS</a>&nbsp;
+                        <a href="/tags/2024-2025/">2024-2025</a>&nbsp;
                     </li>
                 
             </ul>
@@ -623,12 +623,12 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>98 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>3.4k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>11 Mins</span>
         </span>
     
     
@@ -649,12 +649,38 @@ mjx-container[display="true"] + br {
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<link rel="stylesheet" type="text/css" href="/css/auto-number.css"> <!--发布时启用 -->
 
-<h2 id="Leftist-Heaps"><a href="#Leftist-Heaps" class="headerlink" title="Leftist Heaps"></a>Leftist Heaps</h2><h2 id="Skew-Heaps"><a href="#Skew-Heaps" class="headerlink" title="Skew Heaps"></a>Skew Heaps</h2><h3 id="Amortized-Analysis"><a href="#Amortized-Analysis" class="headerlink" title="Amortized Analysis"></a>Amortized Analysis</h3><h4 id="New-Definition"><a href="#New-Definition" class="headerlink" title="New Definition"></a>New Definition</h4><p><strong>Heavy Nodes and Light nodes:</strong> A node p is heavy if <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="29.17ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 12893.1 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mi" transform="translate(888,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1460,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(2338,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(2727,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mo" transform="translate(3230,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mo" transform="translate(4285.8,0)"><path data-c="3E" d="M84 520Q84 528 88 533T96 539L99 540Q106 540 253 471T544 334L687 265Q694 260 694 250T687 235Q685 233 395 96L107 -40H101Q83 -38 83 -20Q83 -19 83 -17Q82 -10 98 -1Q117 9 248 71Q326 108 378 132L626 250L378 368Q90 504 86 509Q84 513 84 520Z"></path></g><g data-mml-node="mi" transform="translate(5341.6,0)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(5792.6,0)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(6137.6,0)"><path data-c="1D454" d="M311 43Q296 30 267 15T206 0Q143 0 105 45T66 160Q66 265 143 353T314 442Q361 442 401 394L404 398Q406 401 409 404T418 412T431 419T447 422Q461 422 470 413T480 394Q480 379 423 152T363 -80Q345 -134 286 -169T151 -205Q10 -205 10 -137Q10 -111 28 -91T74 -71Q89 -71 102 -80T116 -111Q116 -121 114 -130T107 -144T99 -154T92 -162L90 -164H91Q101 -167 151 -167Q189 -167 211 -155Q234 -144 254 -122T282 -75Q288 -56 298 -13Q311 35 311 43ZM384 328L380 339Q377 350 375 354T369 368T359 382T346 393T328 402T306 405Q262 405 221 352Q191 313 171 233T151 117Q151 38 213 38Q269 38 323 108L331 118L384 328Z"></path></g><g data-mml-node="mi" transform="translate(6614.6,0)"><path data-c="210E" d="M137 683Q138 683 209 688T282 694Q294 694 294 685Q294 674 258 534Q220 386 220 383Q220 381 227 388Q288 442 357 442Q411 442 444 415T478 336Q478 285 440 178T402 50Q403 36 407 31T422 26Q450 26 474 56T513 138Q516 149 519 151T535 153Q555 153 555 145Q555 144 551 130Q535 71 500 33Q466 -10 419 -10H414Q367 -10 346 17T325 74Q325 90 361 192T398 345Q398 404 354 404H349Q266 404 205 306L198 293L164 158Q132 28 127 16Q114 -11 83 -11Q69 -11 59 -2T48 16Q48 30 121 320L195 616Q195 629 188 632T149 637H128Q122 643 122 645T124 664Q129 683 137 683Z"></path></g><g data-mml-node="mi" transform="translate(7190.6,0)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mo" transform="translate(7551.6,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g><g data-mml-node="mo" transform="translate(8218.3,0)"><path data-c="2265" d="M83 616Q83 624 89 630T99 636Q107 636 253 568T543 431T687 361Q694 356 694 346T687 331Q685 329 395 192L107 56H101Q83 58 83 76Q83 77 83 79Q82 86 98 95Q117 105 248 167Q326 204 378 228L626 346L360 472Q291 505 200 548Q112 589 98 597T83 616ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z"></path></g><g data-mml-node="mi" transform="translate(9274.1,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mi" transform="translate(10162.1,0)"><path data-c="1D462" d="M21 287Q21 295 30 318T55 370T99 420T158 442Q204 442 227 417T250 358Q250 340 216 246T182 105Q182 62 196 45T238 27T291 44T328 78L339 95Q341 99 377 247Q407 367 413 387T427 416Q444 431 463 431Q480 431 488 421T496 402L420 84Q419 79 419 68Q419 43 426 35T447 26Q469 29 482 57T512 145Q514 153 532 153Q551 153 551 144Q550 139 549 130T540 98T523 55T498 17T462 -8Q454 -10 438 -10Q372 -10 347 46Q345 45 336 36T318 21T296 6T267 -6T233 -11Q189 -11 155 7Q103 38 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(10734.1,0)"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(11612.1,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(12001.1,0)"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mo" transform="translate(12504.1,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container>, otherwise a light node.</p>
-<h4 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h4><ol>
-<li>当以某个heavy node为根的子树与其他结点合并，那么heavy node一定转变为light node.</li>
-<li>当以某个light node为根的子树与其他结点合并，那么light node可能转变为heavy node.</li>
-<li>在合并的过程中发生heavy/light转换的一定是right path上的结点.</li>
-</ol>
+
+  <div class="note p-4 mb-4 rounded-small blue">
+    <p>今天最担心的一门普物也出了，跪谢王老板不杀之恩！心情大好于是来回忆一下本学期的课程感受。</p>
+
+  </div>
+
+<h2 id="计科专业课"><a href="#计科专业课" class="headerlink" title="计科专业课"></a>计科专业课</h2><h3 id="课程综合实践Ⅰ-2-5-学分-CTF101"><a href="#课程综合实践Ⅰ-2-5-学分-CTF101" class="headerlink" title="课程综合实践Ⅰ/2.5 学分/CTF101"></a>课程综合实践Ⅰ/2.5 学分/CTF101</h3><p>虽然是暑假上的短学期课，但是也算进大二上学期课程。这门课由AAA战队的gg们上课，体验相当不错，<del>除了作业一直做到最后一天，大概是我太菜了罢</del>。</p>
+<p>这门课算是喜提艾虎的入门课了，有兴趣的同学建议参加捏。总体而言助教gg们非常负责好吧，有些比较难的部分比如区块链还专门录了b站视频来让我课后狠狠学！不过需要注意的是，写作业的时候千万不要抄袭，不然后果严重。作为大学生涯以来第一门获得满分的课程，在此大赞助教gg们爽快的给分，只要把题做出来并且把报告写好满分基本没问题。（至于其它，由于过了一个学期有点忘了，之后想起来再补充）</p>
+<h3 id="计算机组成-4-5-学分-林芃"><a href="#计算机组成-4-5-学分-林芃" class="headerlink" title="计算机组成/4.5 学分/林芃"></a>计算机组成/4.5 学分/林芃</h3><p>林芃老师人很好，就是说话有点轻(?)，容易让人打瞌睡，所以上课务必认真听别睡着。实际上计组这门课只通过上课听就能将知识点很好地掌握，因为逻辑性较强，比如根据汇编指令来设计相应的数据通路，只需要知道指令具体是如何操作的，加上对CPU原理图的了解，就能复现出课件中使用到的数据通路。</p>
+<p>对于实验部分，有时间的话尽量把bonus部分写了，bonus部分包括浮点数加减法器设计、SCPU拓展及中断、PCPU冲突处理、Cache，本人Cache没写，<del>没时间</del>，这些bonus部分实际上难度并没有特别大，并且做了bonus也明显有助于课内知识的记忆，和课内的关联度很大，可以大大减轻期末复习压力（毕竟课堂上讲的也是理论，真正动手做了才有更深的理解）。</p>
+<p>最后是期末考，说实话这题目真心写不完，最后剩了一个计算没算，但是实际上把写了的题目尽量写对成绩也会比较可观。期末考允许带一张<strong>手写</strong>的A4纸，前辈也已经给出资料参考了，建议大家在上面写一些进制转换相关的内容，这样让题目写起来更快，其它的一些知识点其实没必要写，因为考试也根本来不及去看，实际上写下来的知识点也都记下来了，SCPU的原理图可以画一个，这样对CPU的组成有个大致的印象。 </p>
+<h3 id="高级数据结构与算法分析-4-0-学分-张国川"><a href="#高级数据结构与算法分析-4-0-学分-张国川" class="headerlink" title="高级数据结构与算法分析/4.0 学分/张国川"></a>高级数据结构与算法分析/4.0 学分/张国川</h3><p>这门课是我认为大二上最难的一门课，<del>由于太过痛苦于是不太想回忆</del>。</p>
+<p>平常布置的作业难度不低，但是题量也不大，所以有种感觉就是题目千变万化的随便来一题新的我就写不来了_（怕写错）_，特别是算法部分，一些近似比我是根本无法在短时间内推出来。因此我最后期末疯狂记cyll的ppt上的结论，看看能不能背到几题选择。期末的编程题依然是dp，也仍然写不出来，只能偷几个测试点，<del>恕我无能</del>。最后老师人也是很好的，把我的成绩狠狠捞。</p>
+<p><del>（先写到这吧，该吃饭咯）</del><br><em>吃完饭继续</em></p>
+<p>ads要是让我重来一次我平时一定好好刷dp题，把课内讲的例子全部看懂理解一遍，不然这就是期末该做的事了，个人感觉找不到重点，学起来也有点迷，唉就这样吧。</p>
+<h2 id="竺院H课"><a href="#竺院H课" class="headerlink" title="竺院H课"></a>竺院H课</h2><h3 id="普通物理学Ⅱ-H-4-0-学分-王业伍"><a href="#普通物理学Ⅱ-H-4-0-学分-王业伍" class="headerlink" title="普通物理学Ⅱ(H)/4.0 学分/王业伍"></a>普通物理学Ⅱ(H)/4.0 学分/王业伍</h3><p>上学期普物实验课认识到王老板，当时留给我的印象就是实验简洁，讲解透彻，给分爽快。于是普物又选了王老板的课。</p>
+<p>这门课主要内容是电磁学、光学、量子，这点内容对于竞赛大佬来说当然不在话下，但是对于毫无基础的我来说相当痛苦。平时的作业王老板布置的相当简单，看似十几题作业实际上都是高中物理题难度，<del>甚至更简单</del>。但是考试题目当然不像作业题一样简单，特别是期中考，一题同轴电缆把我狠狠肘击，默写了几条公式就草草结束，不过幸亏王老板也没有公布期中考成绩，要是公布了不敢相信能带给人多大的打击。</p>
+<p>因此在平时上课的时候要特别注意王老板讲的例题，期中考和期末考到类似题或者原题的概率极大，并且还要注意王老板上课随便提的一嘴，比如康普顿散射的证明，互感系数证明这些，非常有可能在考试中出现。但是很不幸由于我上课确实没有好好听，在期末考到康普顿散射的原理证明时只能写出最基础的原理加上一点推演最后默写公式。</p>
+<p>王老板平时会进行不定期小测来检查到课率，因此还是每节课都来比较保险，小测答的好坏影响不大，似乎最后都是只记录交的次数。期中和期末考试题型一致，都是10题选择加几题大题_（是几题呢？我忘了）_，选择题难度低，不过要注意别算错了。</p>
+<h3 id="马克思主义基本原理-H-3-0-学分-吴旭平"><a href="#马克思主义基本原理-H-3-0-学分-吴旭平" class="headerlink" title="马克思主义基本原理(H)/3.0 学分/吴旭平"></a>马克思主义基本原理(H)/3.0 学分/吴旭平</h3><p>无需多言，我相信wxp的给分。这门课平时除了辩论赛和读书报告基本没有多花时间。由于我平时基本没听，所以没有拿到一点发言分。当然如果大家对高绩点有追求的话还是建议平时发言个几次，一次发言就能给平时分加3分，<del>这么看起来平时分拉满轻轻松松啊哈哈</del>。辩论赛很有趣，不过还是多亏了队友神一般的开场和结辩。期末考内容和不带H的马原课差别不大，难度不高，选择题很多靠常识也能选，但是如果认真准备的话心里会比较有底。最后大题考的内容似乎有一致连续性[思考]，有前辈已经整理出需要背的内容，善用搜素不难找到。</p>
+<h2 id="思政类"><a href="#思政类" class="headerlink" title="思政类"></a>思政类</h2><h3 id="军事理论-2-0-学分-吕强"><a href="#军事理论-2-0-学分-吕强" class="headerlink" title="军事理论/2.0 学分/吕强"></a>军事理论/2.0 学分/吕强</h3><p>对吕强老师给分求是早有耳闻，不过还是头铁选了吕强老师的课，因为听说上课讲的不错，本人也对军事略有兴趣。总体而言平时的上课体验还是不错的（<del>睡的很爽</del>），吕强老师讲课应该是没话说，但是其中好像夹杂了不少私货？（个人观点）评分主要由论文和期末考两部分构成，其中论文占比极大，吕强老师对论文要求很高，甚至对排版有要求。必须承认本人写论文的时候确实没少用GPT，但是最好不要直接抄GPT的，可以借鉴一下GPT的一些观点啥的，但是特别需要注意GPT给出的一些例证，如果你没啥听说过那大概率是编的，要用之前自己搜一下看看是否真实。期末考主打一个比手速和对书本目录的了解程度，如果考前看过一遍目录了解知识点的大致分布的话找起来会很快。当然考试的时候考到了不少关于导弹的内容，比如发动机，制导方式啥的，这部分内容老师课上会讲，可以在课上就把它们弄懂，免得考场上还要花时间看这些。最后也是成功从吕强老师手上幸存下来了，虽然绩点没有很高但也不至于拉低菌剂。</p>
+<h3 id="社会主义发展史-1-5-学分-马灿林，包大为等"><a href="#社会主义发展史-1-5-学分-马灿林，包大为等" class="headerlink" title="社会主义发展史/1.5 学分/马灿林，包大为等"></a>社会主义发展史/1.5 学分/马灿林，包大为等</h3><p>哈哈，“一节幽默的大水课”，第一节课是wxp老师上，这句话真的和这门课很match。感觉就没几个人上课认真听，基本都在干自己的事。平时有两次小测，完全开卷的可以携带任何纸质资料，依稀记得好像考了什么跨越卡夫丁峡谷，反正打印的资料上有，抄+编就对了。实际上老师们上课讲的挺有趣的，<del>虽然每次我都没认真听</del>。最后结课需要写一篇论文，选题和课程内容相关即可，我其实不太清楚怎么样写才能给高分，毕竟这种思政课得高分的方法总是让人捉摸不透，但是只要认真写也应该有个保底。</p>
+<h2 id="数理实验及通识课"><a href="#数理实验及通识课" class="headerlink" title="数理实验及通识课"></a>数理实验及通识课</h2><h3 id="普通物理学实验Ⅱ-1-5-学分-自己选老师"><a href="#普通物理学实验Ⅱ-1-5-学分-自己选老师" class="headerlink" title="普通物理学实验Ⅱ/1.5 学分/自己选老师"></a>普通物理学实验Ⅱ/1.5 学分/自己选老师</h3><p>和实验Ⅰ唯一的区别就是可以交电子报告了。实际上<strong>选个好实验比认真写报告更重要</strong>，选上大实验的普遍比选小实验的得分高。但是我选课的时候网卡的要死，进去的时候只剩下小实验了，于是我做了14周小实验，每周都得交报告，真的很痛苦。并且每周都得看看老师的给分如何，一不小心拿了个比较低的分就得伤心半天。值得注意的是，一些前辈们说的给分好的老师实际上给分并不一定好，所以也不要完全相信经验贴，<del>但是给分不好的老师几乎一定不好</del>。</p>
+<h3 id="概率论与数理统计-2-5-学分-赵敏智"><a href="#概率论与数理统计-2-5-学分-赵敏智" class="headerlink" title="概率论与数理统计/2.5 学分/赵敏智"></a>概率论与数理统计/2.5 学分/赵敏智</h3><p>赵妈真的很好，平时讲课也很细致，特别是一些难以理解的部分也能讲的通俗易懂。这门课算是本人上课最认真听的课之一了，知识点有涉及部分重积分知识，不过和数分Ⅱ比起来真是小巫见大巫。</p>
+<p>平时有三次小测，取两次最高的计入平时分，每次小测包括五分的参与分和十分的实际作答分数。个人感觉三次难度平均，但往年也有说是第二次小测比较难的（可能是抽到的题不同），今年应该是首次采用新系统考小测吧，因为第一次小测把xzzd击落了。</p>
+<p>今年期末考试计算量格外大，导致我倒数第二大题根本没时间写完，最后一题的假设检验也只能快速算完，也不知道算的对不对。填空题让我印象深刻的就是第三题需要借用正态分布的密度函数进行积分计算，直接积分似乎算不出来，唉这题考试时算了半天也没写出来，导致我心态爆炸。</p>
+<p>最后还是相信赵妈的给分，本以为这门要挂了但还是给我捞上90了。</p>
+<h3 id="博弈论基础-1-5-学分-蒋文华"><a href="#博弈论基础-1-5-学分-蒋文华" class="headerlink" title="博弈论基础/1.5 学分/蒋文华"></a>博弈论基础/1.5 学分/蒋文华</h3><p>这门课是秋学期上的，到现在有点印象不深了。平时课堂氛围很好，虽然我平时上课也是基本没听，但是每次老师讲到有意思的也会跟着大家嘿嘿笑。实际上如果认真听的话应该能够有所收获，毕竟生活处处是博弈。</p>
+<p>关于平时成绩分布主要有xzzd视频观看、小测、讨论题、作业等，作业如果放到期末来写显得非常费时间，需要整理所有的博弈模型大概写个好几千字的样子，不过某乎上已经有前辈整理完这些模型和相应的例子的，唯一需要做的就是转述这些模型然后照猫画虎地想一些例子出来。追求分数的同学平时的小测要特别注意，尽量翻翻课件或提起检索一些资料有所准备，否则限时五分钟内会手忙脚乱的。</p>
+<p>期末考试该怎么拿分<del>懂的都懂</del>，有前辈已经把答案分享出来了，如果你善于搜索，大概是能够找到的（这部分是能说的吗？不妥联系我删了），本人就是偶然之间发现的，然后期末轻松拿满，但是由于平时小测不太注意，错了不少题目，最后总评刚好被卡，但是也已经很满意了。</p>
+<h2 id="体育课"><a href="#体育课" class="headerlink" title="体育课"></a>体育课</h2><h3 id="乒乓球（中级）-1-0-学分-陈志强"><a href="#乒乓球（中级）-1-0-学分-陈志强" class="headerlink" title="乒乓球（中级）/1.0 学分/陈志强"></a>乒乓球（中级）/1.0 学分/陈志强</h3><p>已经连续上了两个学期陈老师的课，陈老师真的很好。乒乓球中级班期末考核是左推右攻，最后期末大家的成绩看起来都挺不错的，至少在专项上乒乓球是比较好拿高分的体育课之一。可惜下学期没能再选上陈老师的课。</p>
+<p>好啦这学期就这么结束了，每周休三天半真是太爽了。</p>
 
 		</div>
 
@@ -662,18 +688,18 @@ mjx-container[display="true"] + br {
 		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
 			<div class="article-copyright-info-container">
     <ul>
-        <li><strong>Title:</strong> Lecture 4: Leftist Heaps and Skew Heaps</li>
+        <li><strong>Title:</strong> 大二上课程总结</li>
         <li><strong>Author:</strong> zcyzzz</li>
         <li><strong>Created at
-                :</strong> 2024-11-13 19:58:07</li>
+                :</strong> 2025-01-17 17:54:15</li>
         
             <li>
                 <strong>Updated at
-                    :</strong> 2024-11-13 20:05:27
+                    :</strong> 2025-01-17 17:59:26
             </li>
         
         <li>
-            <strong>Link:</strong> https://rockissleeping.github.io/2024/11/13/ads_lec4/
+            <strong>Link:</strong> https://rockissleeping.github.io/2025/01/17/zongjie/
         </li>
         <li>
             <strong>
@@ -695,7 +721,7 @@ mjx-container[display="true"] + br {
 		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
 			
 			<li class="tag-item mx-0.5">
-				<a href="/tags/DS/">#DS</a>&nbsp;
+				<a href="/tags/2024-2025/">#2024-2025</a>&nbsp;
 			</li>
 			
 		</ul>
@@ -706,23 +732,11 @@ mjx-container[display="true"] + br {
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
 			
-			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="prev" rel="prev" href="/2024/12/16/com_problem/">
-					<span class="left arrow-icon flex justify-center items-center">
-						<i class="fa-solid fa-chevron-left"></i>
-					</span>
-					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">Problems Explanation</span>
-						<span class="post-nav-item">Prev posts</span>
-					</span>
-				</a>
-			</div>
-			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
-				<a class="next" rel="next" href="/2024/11/13/ads_lec2/">
+				<a class="next" rel="next" href="/2024/12/28/com_C2/">
 					<span class="title flex justify-center items-center">
-						<span class="post-nav-title-item">Lecture 2: RB Tree and B+ Tree</span>
+						<span class="post-nav-title-item">Chapter2: Instructions: Language of the Machine</span>
 						<span class="post-nav-item">Next posts</span>
 					</span>
 					<span class="right arrow-icon flex justify-center items-center">
@@ -743,8 +757,8 @@ mjx-container[display="true"] + br {
 		<div class="post-toc-wrap">
 	<div class="post-toc">
 		<div class="toc-title">On this page</div>
-		<div class="page-title">Lecture 4: Leftist Heaps and Skew Heaps</div>
-		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Leftist-Heaps"><span class="nav-number">1.</span> <span class="nav-text">Leftist Heaps</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Skew-Heaps"><span class="nav-number">2.</span> <span class="nav-text">Skew Heaps</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Amortized-Analysis"><span class="nav-number">2.1.</span> <span class="nav-text">Amortized Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#New-Definition"><span class="nav-number">2.1.1.</span> <span class="nav-text">New Definition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Properties"><span class="nav-number">2.1.2.</span> <span class="nav-text">Properties</span></a></li></ol></li></ol></li></ol>
+		<div class="page-title">大二上课程总结</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%A7%91%E4%B8%93%E4%B8%9A%E8%AF%BE"><span class="nav-number">1.</span> <span class="nav-text">计科专业课</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E7%BB%BC%E5%90%88%E5%AE%9E%E8%B7%B5%E2%85%A0-2-5-%E5%AD%A6%E5%88%86-CTF101"><span class="nav-number">1.1.</span> <span class="nav-text">课程综合实践Ⅰ&#x2F;2.5 学分&#x2F;CTF101</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90-4-5-%E5%AD%A6%E5%88%86-%E6%9E%97%E8%8A%83"><span class="nav-number">1.2.</span> <span class="nav-text">计算机组成&#x2F;4.5 学分&#x2F;林芃</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-4-0-%E5%AD%A6%E5%88%86-%E5%BC%A0%E5%9B%BD%E5%B7%9D"><span class="nav-number">1.3.</span> <span class="nav-text">高级数据结构与算法分析&#x2F;4.0 学分&#x2F;张国川</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AB%BA%E9%99%A2H%E8%AF%BE"><span class="nav-number">2.</span> <span class="nav-text">竺院H课</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AD%A6%E2%85%A1-H-4-0-%E5%AD%A6%E5%88%86-%E7%8E%8B%E4%B8%9A%E4%BC%8D"><span class="nav-number">2.1.</span> <span class="nav-text">普通物理学Ⅱ(H)&#x2F;4.0 学分&#x2F;王业伍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A9%AC%E5%85%8B%E6%80%9D%E4%B8%BB%E4%B9%89%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86-H-3-0-%E5%AD%A6%E5%88%86-%E5%90%B4%E6%97%AD%E5%B9%B3"><span class="nav-number">2.2.</span> <span class="nav-text">马克思主义基本原理(H)&#x2F;3.0 学分&#x2F;吴旭平</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E6%94%BF%E7%B1%BB"><span class="nav-number">3.</span> <span class="nav-text">思政类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%9B%E4%BA%8B%E7%90%86%E8%AE%BA-2-0-%E5%AD%A6%E5%88%86-%E5%90%95%E5%BC%BA"><span class="nav-number">3.1.</span> <span class="nav-text">军事理论&#x2F;2.0 学分&#x2F;吕强</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A4%BE%E4%BC%9A%E4%B8%BB%E4%B9%89%E5%8F%91%E5%B1%95%E5%8F%B2-1-5-%E5%AD%A6%E5%88%86-%E9%A9%AC%E7%81%BF%E6%9E%97%EF%BC%8C%E5%8C%85%E5%A4%A7%E4%B8%BA%E7%AD%89"><span class="nav-number">3.2.</span> <span class="nav-text">社会主义发展史&#x2F;1.5 学分&#x2F;马灿林，包大为等</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%90%86%E5%AE%9E%E9%AA%8C%E5%8F%8A%E9%80%9A%E8%AF%86%E8%AF%BE"><span class="nav-number">4.</span> <span class="nav-text">数理实验及通识课</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%E5%AD%A6%E5%AE%9E%E9%AA%8C%E2%85%A1-1-5-%E5%AD%A6%E5%88%86-%E8%87%AA%E5%B7%B1%E9%80%89%E8%80%81%E5%B8%88"><span class="nav-number">4.1.</span> <span class="nav-text">普通物理学实验Ⅱ&#x2F;1.5 学分&#x2F;自己选老师</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1-2-5-%E5%AD%A6%E5%88%86-%E8%B5%B5%E6%95%8F%E6%99%BA"><span class="nav-number">4.2.</span> <span class="nav-text">概率论与数理统计&#x2F;2.5 学分&#x2F;赵敏智</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%9A%E5%BC%88%E8%AE%BA%E5%9F%BA%E7%A1%80-1-5-%E5%AD%A6%E5%88%86-%E8%92%8B%E6%96%87%E5%8D%8E"><span class="nav-number">4.3.</span> <span class="nav-text">博弈论基础&#x2F;1.5 学分&#x2F;蒋文华</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%93%E8%82%B2%E8%AF%BE"><span class="nav-number">5.</span> <span class="nav-text">体育课</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%92%E4%B9%93%E7%90%83%EF%BC%88%E4%B8%AD%E7%BA%A7%EF%BC%89-1-0-%E5%AD%A6%E5%88%86-%E9%99%88%E5%BF%97%E5%BC%BA"><span class="nav-number">5.1.</span> <span class="nav-text">乒乓球（中级）&#x2F;1.0 学分&#x2F;陈志强</span></a></li></ol></li></ol>
 
 	</div>
 </div>
